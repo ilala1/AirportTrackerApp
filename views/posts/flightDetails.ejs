@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="css/my.css">
+    <title>Airport Departure</title>
+</head>
+<body>  
+  <table  class="tablecolor" style="width:100%" border="2px">
+    <tr class="header">
+      <th>Flight Details</th> <!-- flight airline / carrierFsCode -->
+      <th>Departure Info</th>
+      <th>Arrival Info</th> 
+      <th>Time</th>
+      <!-- Flight carrierCode and flight number -->
+    </tr>
+    <% let airline =  flightDetails.appendix;  %>
+    <% let itemdata =  flightDetails.flightStatus;  %>
+      <tr>
+     <!-- Flight Details -->
+        <td>
+          <p><%= airline.airlines[0].name %></p> 
+          <p><%= itemdata.carrierFsCode %> <%= itemdata.flightNumber %> </p>
+        </td>
+
+      <!-- Departure Airport, airport Fs code and Terminal -->
+        <td><p> <%= airline.airports[1].name %> (<%= itemdata.departureAirportFsCode%>) </p>
+        <p> Terminal: <%= itemdata.airportResources.departureTerminal %> </p></td>
+
+      <!-- Arrival to Airport, airport Fs code and Terminal -->
+        <td><p> <%= airline.airports[0].name %> (<%= itemdata.arrivalAirportFsCode%>) </p>
+        <p> Terminal: <%= itemdata.airportResources.arrivalTerminal %> </p></td>
+
+      <!-- Time -->
+      <td><p> Date: <%= itemdata.departureDate.dateLocal.substr(0,10); %> </p> 
+          <p> Time: <%= itemdata.departureDate.dateLocal.substr(11,15); %> </p> </td>
+
+
+
+
+
+      </tr>     
+    </table>
+  </body>
+</html>

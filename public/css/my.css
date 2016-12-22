@@ -1,0 +1,17 @@
+.tablecolor{
+    background-color: black;
+    color: yellow;
+}
+
+.header {
+    background-color: yellow;
+    color: black;
+}
+
+.input {
+    padding-left: 35%;
+}
+
+body{
+    background-image: url("../img/sunsetTakeOff1.png");
+}
