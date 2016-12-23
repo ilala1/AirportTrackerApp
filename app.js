@@ -18,6 +18,6 @@ app.use(session({secret:"Airportdetails",
 app.use(routes);
 app.use(airportsroutes);
 
-app.listen(3000 , () => {
+app.listen(process.env.PORT || 3000 , () => {
   console.log('listening on port 3000');
 });
