@@ -1,5 +1,9 @@
 $(() => {
 
+    /** 
+    This is a description
+    * On selecting search button shows the relevant data from the array
+    */
     $("#submitSearch").click((e) => {
         e.preventDefault();
         let locationsearch = $('#search').val();
@@ -22,13 +26,15 @@ $(() => {
             });
     });
 
-
-    $('body').on('click', (event) => {//click event for when an element on the body is clicked
+//click event for when an element on the body is clicked
+    $('body').on('click', (event) => { 
         event.preventDefault();
-        //      console.log(event.target.id);//visual rep of the element that was clicked
-        if (event.target.name === "aiportCode") {//if the event.target.id is true
-            console.log($(event.target).attr("data-id"));//visual rep of the element
-            updateServerWithData($(event.target).attr("data-id"));//call the method with event.target.id e.g. LHR as the parameter
+        //if the event.target.id is true
+        if (event.target.name === "aiportCode") {
+            //visual rep of the element
+            console.log($(event.target).attr("data-id"));
+            //call the method with event.target.id e.g. LHR as the parameter
+            updateServerWithData($(event.target).attr("data-id"));
         }
     });
 
@@ -42,25 +48,18 @@ $(() => {
         })
             .then((data) => {
                 window.location.href = "/departures";
-                //      let theAirportData = data.result;
-                //       console.log(theAirportData);
-                //     console.log(data.result);
-                //     for (let i in theAirportData){
-                //         console.log(theAirportData[i]);
-                //  for(let arrayindex = 0; arrayindex < theAirportData.length; arrayindex++ ){
-                //         $("#putShitHere").append(`<p>${theAirportData[arrayindex].name}</p>`);
-                //     }
-                //     }
             });
     }
 
-
-    $('#airportDepartures').on('click', (event) => {//click event for when an element on the body is clicked
+//click event for when an element on the body is clicked
+    $('#airportDepartures').on('click', (event) => {
         event.preventDefault();
-        //      console.log(event.target.id);//visual rep of the element that was clicked
-        if (event.target.name === "aiportCode") {//if the event.target.id is true
-            console.log($(event.target).attr("data-id"));//visual rep of the element
-            updateServerWithFlightDetailsData($(event.target).attr("data-id"));//call the method with event.target.id e.g. LHR as the parameter
+        //if the event.target.id is true
+        if (event.target.name === "aiportCode") {
+            //visual rep of the element
+            console.log($(event.target).attr("data-id"));
+            //call the method with event.target.id e.g. LHR as the parameter
+            updateServerWithFlightDetailsData($(event.target).attr("data-id"));
         }
     });
 

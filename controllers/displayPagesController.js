@@ -8,15 +8,15 @@ class PageController {
 
     static showAirports(req , res) {
     res.render("posts/departures",  {
+         // session object is stored in the page
         departureDetails: req.session.departures
     }); 
     }
 
 
     static showFlightData(req , res) {
-        console.log("WHAT THE FUCK");
-        console.log(req.session.flights.flightStatus);
         res.render("posts/flightDetails",  {
+        // session object is stored in the page as another JSON Object
             flightDetails: req.session.flights
         }); 
     }
