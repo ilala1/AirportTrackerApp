@@ -6,6 +6,10 @@ h1{
     padding-left: 27%;
 }
 
+#airportDepartures{
+    opacity: 30%;
+}
+
 .text{
     color: white;
 }
