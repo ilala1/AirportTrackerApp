@@ -12,7 +12,6 @@ $(() => {
             }
         })
             .then((data) => {
-                $("#SearchTitle").append(`<p>Airports around :${locationsearch}</p>`);
                 let theData = data.result;
                 console.log(theData);
                 for (let i in theData) {//for each item in the object

@@ -1,15 +1,21 @@
 *{
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'Cinzel', serif;
 }
 h1{
     color: white;
-    padding-left: 30%;
+    padding-left: 27%;
+}
+
+.text{
+    color: white;
 }
 
 .tablecolor{
     background-color: black;
     color: yellow;
+    
 }
+
 .header {
     background-color: yellow;
     color: black;
