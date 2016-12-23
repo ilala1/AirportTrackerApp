@@ -12,14 +12,14 @@
       <th>Depart to</th>
       <th></th>
     </tr>
-    <% let data =  departureDetails.flightTracks;  %>
+    <% let data =  departureDetails;  %>
     <% for (var i in data) { %>
       <tr>
-        <td><p> Date: <%= data[i].departureDate.dateLocal.substr(0,10); %> </p> 
-         <p> Time: <%= data[i].departureDate.dateLocal.substr(11,19); %> </p>
+        <td><p> Date: <%= data[i].date.substr(0,10); %> </p> 
+         <p> Time: <%= data[i].date.substr(11,19); %> </p>
         </td>
-        <td><%= data[i].carrierFsCode %> <%= data[i].flightNumber %></td>
-        <td><%= data[i].arrivalAirportFsCode %> </td>
+        <td><%= data[i].carrierCode %> <%= data[i].flightNumber %></td>
+        <td><%= data[i].arrivalFsCode %> </td>
         <td> <a name="aiportCode" href="#" data-id=<%= data[i].flightId %>>  Flight details </a> </td>
       </tr>
     <% } %>        

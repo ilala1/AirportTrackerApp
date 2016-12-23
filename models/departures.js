@@ -3,10 +3,10 @@
 class departures {
 
     constructor(obj){
-        if (!obj.hasOwnProperty('departuredate').hasOwnProperty('dateLocal')){
+        if (!obj.hasOwnProperty('departureDate')){
             throw new Error("Missing departuredate");
         } else {
-            this.date = obj.date;
+            this.date = obj.departureDate.dateLocal;
         }
 
         if (!obj.hasOwnProperty('carrierFsCode')){
@@ -21,7 +21,7 @@ class departures {
             this.flightNumber = obj.flightNumber;
         }
         
-        if (!obj.hasOwnProperty('arrivalFsCode')){
+        if (!obj.hasOwnProperty('arrivalAirportFsCode')){
             throw new Error("Missing arrivalFsCode");
         } else {
             this.arrivalFsCode = obj.arrivalFsCode;
