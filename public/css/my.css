@@ -1,8 +1,12 @@
+h2{
+    color: white;
+    padding-left: 35%;
+}
+
 .tablecolor{
     background-color: black;
     color: yellow;
 }
-
 .header {
     background-color: yellow;
     color: black;
