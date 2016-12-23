@@ -1,6 +1,9 @@
-h2{
+*{
+    font-family: 'Orbitron', sans-serif;
+}
+h1{
     color: white;
-    padding-left: 35%;
+    padding-left: 30%;
 }
 
 .tablecolor{

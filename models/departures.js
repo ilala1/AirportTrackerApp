@@ -24,7 +24,7 @@ class departures {
         if (!obj.hasOwnProperty('arrivalAirportFsCode')){
             throw new Error("Missing arrivalFsCode");
         } else {
-            this.arrivalFsCode = obj.arrivalFsCode;
+            this.arrivalFsCode = obj.arrivalAirportFsCode;
         }
 
         if (!obj.hasOwnProperty('flightId')){

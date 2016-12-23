@@ -22,7 +22,7 @@
          <p> Time: <%= data[i].date.substr(11,19); %> </p>
         </td>
         <td><%= data[i].carrierCode %> <%= data[i].flightNumber %></td>
-        <td><%= data[i].arrivalFsCode %> </td>
+        <td> <%= data[i].arrivalFsCode %> </td>
         <td> <a name="aiportCode" href="#" data-id=<%= data[i].flightId %>>  Flight details </a> </td>
       </tr>
     <% } %>        
