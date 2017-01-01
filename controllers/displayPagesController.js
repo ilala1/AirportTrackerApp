@@ -13,6 +13,14 @@ class PageController {
     }); 
     }
 
+  static showAirportsArrivals(req , res) {
+    res.render("posts/arrivals",  {
+         // session object is stored in the page
+        arrivalDetails: req.session.arrivals
+        
+    }); 
+    
+    }
 
     static showFlightData(req , res) {
         res.render("posts/flightDetails",  {

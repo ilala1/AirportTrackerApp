@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Airport Arrivals</title>
+</head>
+<body>  
+
+  <table id="airportArrivals" class="tablecolor" style="width:100%" border="2px">
+    <tr class="header">
+      <th>Time</th>
+      <th>Flight Number</th> 
+      <th>Arriving from</th>
+      <th></th>
+    </tr>
+    
+    <% let data =  arrivalDetails;  %>
+    <% for (var i in data) { %>
+      <tr>
+        <td>   <%= data[i].date.substr(0,10);  %></td>
+        <td>   <%= data[i].carrierCode %> <%= data[i].flightNumber %></td>
+        <td>   <%= data[i].departureAirportCode %></td>
+        <td>   <a name="airportCodeArrival" href="#" data-id=<%= data[i].flightId %>>  Flight details </a> </td>
+      </tr>
+    <% } %>        
+    </table>
+  </body>
+</html>
