@@ -17,7 +17,6 @@ $(() => {
         })
             .then((data) => {
                 let theData = data.result;
-                console.log(theData);
                 for (let i in theData) {//for each item in the object
                     $("#airportName").append(`<p>${theData[i].name}</p>`);
                     $("#countryName").append(`<p>${theData[i].city}</p>`);

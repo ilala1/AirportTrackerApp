@@ -18,8 +18,7 @@
     <% let data =  departureDetails;  %>
     <% for (var i in data) { %>
       <tr>
-        <td><p> Date: <%= data[i].date.substr(0,10); %> </p> 
-         <p> Time: <%= data[i].date.substr(11,19); %> </p>
+        <td><p> <%= moment(data[i].date).format('MMMM Do YYYY, h:mm a '); %> </p> 
         </td>
         <td><%= data[i].carrierCode %> <%= data[i].flightNumber %></td>
         <td> <%= data[i].arrivalFsCode %> </td>

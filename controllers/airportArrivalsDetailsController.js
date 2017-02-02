@@ -13,25 +13,6 @@ class Airport {
     * @param {String} res -  string
     * @return {Promise} return JSON Object OF Airport
     */
-    // static search(req, res) {
-    //     //Fetch the lat and long from input data from front end (textfield)
-    //     FetchLatLong.doFetchData(req.body.city).then(result => {
-    //         //result = [lat,long] - from node.Geocoder
-    //         //returns result and pass as arguements in next function
-    //         return FetchSearchAirportApiData.doFetchSearchAirportApiData(result)
-    //     })
-    //         .then(result => {
-    //             // turn the result into a json Object
-    //             res.status(200).send({
-    //                 //key: result   -   value: API JSON Object 
-    //                 result: result
-    //             })
-    //         })
-    //         .catch(err => {
-    //             res.status(400).send(err);
-    //         })
-    // }
-
 
     /**
     * This is a description

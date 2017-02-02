@@ -16,7 +16,7 @@
     <% let data =  arrivalDetails;  %>
     <% for (var i in data) { %>
       <tr>
-        <td>   <%= data[i].date.substr(0,10);  %></td>
+        <td>   <%= moment(data[i].date).format('MMMM Do YYYY, h:mm a ');  %></td>
         <td>   <%= data[i].carrierCode %> <%= data[i].flightNumber %></td>
         <td>   <%= data[i].departureAirportCode %></td>
         <td>   <a name="airportCodeArrival" href="#" data-id=<%= data[i].flightId %>>  Flight details </a> </td>

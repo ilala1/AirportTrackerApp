@@ -1,3 +1,5 @@
+const moment = require('moment');
+
 class PageController {
 
   // INDEX - GET /
@@ -9,14 +11,16 @@ class PageController {
     static showAirports(req , res) {
     res.render("posts/departures",  {
          // session object is stored in the page
-        departureDetails: req.session.departures
+        departureDetails: req.session.departures,
+        moment:moment
     }); 
     }
 
   static showAirportsArrivals(req , res) {
     res.render("posts/arrivals",  {
          // session object is stored in the page
-        arrivalDetails: req.session.arrivals
+        arrivalDetails: req.session.arrivals,
+        moment:moment
         
     }); 
     
